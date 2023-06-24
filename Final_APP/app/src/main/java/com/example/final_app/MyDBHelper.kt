@@ -15,7 +15,8 @@ class MyDBHelper (
         private const val v = 1 //資料庫版本
     }
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE myTable(Note integer PRIMARY KEY AUTOINCREMENT DEFAULT 1, " +
+        db.execSQL("CREATE TABLE myTable(Note BIGINT PRIMARY KEY " +
+                ", " +
                 "finish integer NOT NULL, " +
                 "year integer NOT NULL, " +
                 "month integer NOT NULL, " +
